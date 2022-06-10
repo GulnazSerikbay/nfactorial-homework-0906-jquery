@@ -1,0 +1,56 @@
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    height: 15vh;
+    font-weight: bold;
+}
+
+.container {
+    margin: 30px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 100%;
+    color: blueviolet;
+}
+
+a {
+    color: black;
+}
+.text-area {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    margin: 0px 0px 0px 0px;
+    padding: 30px;
+    text-align: center;
+}
+
+
+.text-area2 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    margin: 0px 0px 0px 0px;
+    padding: 30px;
+    text-align: center;
+}
+
+#par {
+    text-align: center;
+    font-size: medium;
+    
+}
+
+span {
+    font-weight: bold;
+    color: blueviolet;
+}
+
