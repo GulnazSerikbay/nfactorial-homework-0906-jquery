@@ -28,35 +28,43 @@
 
 
      else { // status == 'tom'
-      const name = $('#validationCustom01').val()
-      const char = $('#validationCustom02').val()
-      const adv = $('#validationCustomUsername').val()
-      //const adj = $('#validationCustom03').val()
-      //$('#adj').text(adj)
-      const size = name + char + adv
+      const name = parseInt($('#validationCustom01').val())
+      const char = parseInt($('#validationCustom02').val())
+      const adv = parseInt($('#validationCustomUsername').val())
+      if (Number.isInteger(name) && Number.isInteger(char) && Number.isInteger(adv)){
+        const size = (name * char) * adv / 8000
 
-      console.log(size)
-      if (name != "" && char != "" && adv != "") {
+        $('#size').text(size)
+        console.log(size)
+  
+        if (name != "" && char != "" && adv != "") {
         
-       $('.text-area2').show()
-      }
-      else{
-       event.preventDefault()
-       event.stopPropagation()
-      }
-       
+         $('.text-area2').show()
+
+        }
+        else{
+         event.preventDefault()
+         event.stopPropagation()
+        }
+      } 
      }
    })
 
-
-   $('#tomBtn').on('click', () =>
+function tomBtn() {
     if (status != "tom") {
-      $('#id').find('label[for="validationCustom01"]').text("Image width:")
-      $('#id').find('label[for="validationCustom02"]').text("Image width:")
+      $('.container h1').text("Tom Thumb (insert numbers!)")
+      $('#lname').text("Image width:")
+      $('#lchar').text("Image height:")
+      $('#ladv').text("Number of colors:")
+      $('#adject').hide()
+      $('button').text("Calc")
+      $('.text-area').hide()
+
+      console.log($('#lname').text())
     }
     status = "tom"
-   )
+}
 
-   $('#mad').on('click', ()=>
+   $('#mad').on('click', ()=>{
     status = "mad"
-   )
+   })

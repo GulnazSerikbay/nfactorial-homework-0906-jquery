@@ -18,7 +18,7 @@
             <nav class="nav flex-column">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="index.html" id = "mad">Mad Libs</a>
-                <a class="nav-link" href="index.html" id = "tomBtn">Tom Thumb</a>
+                <a class="nav-link" href="#" onclick = "tomBtn(); return false">Tom Thumb</a>
 
               </nav>
           </div>
@@ -26,7 +26,7 @@
             <h1>Mad Libs</h1>
             <form id="myform" class="row g-3 needs-validation" novalidate>
                 <div class="col-md-6">
-                  <label for="validationCustom01" class="form-label">Name</label>
+                  <label for="validationCustom01" class="form-label" id ="lname">Name</label>
                   <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
                   <div class="valid-feedback">
                     Looks good!
@@ -36,7 +36,7 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustom02" class="form-label">Character</label>
+                  <label for="validationCustom02" class="form-label" id ="lchar">Character</label>
                   <input type="text" class="form-control" id="validationCustom02" value="" required>
                   <div class="valid-feedback">
                     Looks good!
@@ -46,7 +46,7 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <label for="validationCustomUsername" class="form-label">Adverb</label>
+                  <label for="validationCustomUsername" class="form-label" id="ladv">Adverb</label>
                   <div class="input-group has-validation">
                     
                     <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
@@ -55,8 +55,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <label for="validationCustom03" class="form-label">Adjective</label>
+                <div class="col-md-6" id = "adject">
+                  <label for="validationCustom03" class="form-label" >Adjective</label>
                   <input type="text" class="form-control" id="validationCustom03" required>
                   <div class="invalid-feedback">
                     Please provide an adjective.
@@ -79,7 +79,7 @@
         </div>
 
         <div class="text-area2 col-12">
-          <p id = "par">File is <span id="size"></span>
+          <p id = "par">File is <span id="size"> </span> KB
           </p>
         </div>
       </div>
